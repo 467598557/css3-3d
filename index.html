@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>CSS 3D演示</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="mb20">
+    填充颜色：
+    <span id="colorContainer">
+        <input type="radio" name="color" id="redRadio" checked value="red" >
+        <label for="redRadio">red</label>
+        <input type="radio" name="color" id="blueRadio" value="blue" >
+        <label for="blueRadio">blue</label>
+        <input type="radio" name="color" id="grayRadio" value="gray" >
+        <label for="grayRadio">gray</label>
+        <input type="radio" name="color" id="blackRadio" value="black" >
+        <label for="blackRadio">black</label>
+        <input type="radio" name="color" id="greenRadio" value="green" >
+        <label for="greenRadio">green</label>
+    </span>
+</div>
+<div class="mb20">
+    调整尺寸：
+    x(<span id="xSizeText">200</span>)：<input class="sizeRange" type="range" data-type="x" value="200" min="100" max="300" />
+    y(<span id="ySizeText">200</span>)：<input class="sizeRange" type="range" data-type="y" value="200" min="100" max="300" />
+    z(<span id="zSizeText">200</span>)：<input class="sizeRange" type="range" data-type="z" value="200" min="100" max="300" />
+</div>  
+<div class="mb20">      
+    就怎么炸（按住某个面，左右滑动也可以炸一下）：  
+    (<span id="offsetSizeText">0</span>)<input type="range" id="offsetRange" data-type="x" value="0" min="0" max="300" />
+</div>
+<div id="view">
+</div>
+    <!--此jquery为3.x版本-->
+    <script type="text/javascript" src="js/cube.js"></script>
+    <script type="text/javascript" src="js/third/jquery.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
